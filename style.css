@@ -1,0 +1,1351 @@
+/* CSS Reset  เพื่อด้านบนชิดขอบ*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+/*  BODY  ตั้งค่าหน้าเว็บ */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family:
+       "Kanit", "Noto Sans Thai", Arial,sans-serif;
+}
+
+header, section, footer {
+    max-width: 100%;
+}
+
+/* HEADER หลัก */
+
+header {
+    width: 100%;
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-top: 4px solid #f5d76e;
+}
+
+/* ใน.HEADER  */
+
+.header {
+    width: 100%;
+    max-width: none;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*   LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {                 /*  ภาพ LOGO */
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08); /*  LOGO ขยายเมื่อเมาส์ไปวาง */
+}
+ /* ตัวนำทาง */
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 5px;
+}
+
+nav > ul > li {        /* เมนูหลัก */
+    position: relative;
+    list-style: none;
+}
+
+/* ลิงก์เมนูหลัก */
+
+nav > ul > li > a {
+    display: block;
+    padding: 12px 17px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+    color: #f5d76e;
+    background-color: rgba(255, 255, 255, 0.12);  /* กำหนดความโปรงใส่*/
+    transform: translateY(-2px);
+}
+
+/* ตัว Dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a::after {    /* ลูกศร */
+    content: " ▾";
+    color: #f5d76e;
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::after {             /* หมุนลูกศรเมื่อ Hover */
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+/*  กล่อง Dropdown */
+
+nav > ul > li > ul.dropdown-content {
+    display: block;            /* ทำให้รายการเรียงแนวตั้ง */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    min-width: 250px;
+    margin: 10px 0 0 0;
+    padding: 8px 0;
+    list-style: none;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.20);
+    opacity: 0;                   /* ซ่อน Dropdown */
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+    z-index: 2000;
+    box-sizing: border-box;
+}
+
+nav > ul > li.dropdown:hover > ul.dropdown-content {           /* แสดง Dropdown เมื่อ Hover */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+nav > ul > li > ul.dropdown-content > li {      /*  รายการใน Dropdown */
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*   ลิงก์ภายใน Dropdown */
+
+nav > ul > li > ul.dropdown-content > li > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    color: #26382b;
+    background: transparent;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+nav > ul > li > ul.dropdown-content > li > a:hover {    /* Hover Dropdown ตอนคลิก */
+    color: #ffffff;
+    background-color: #315b38;
+    padding-left: 25px;
+}
+
+nav > ul > li > ul.dropdown-content > li:not(:last-child) > a {   /* เส้นแบ่ง Drop */
+    border-bottom: 1px solid #8989895f;
+}
+
+nav > ul > li > a {          /*  เอฟเฟกต์เมนูหลัก */
+    position: relative;
+}
+
+nav > ul > li:not(.dropdown) > a::after {  /* เส้นใต้เมื่อ Hover หลัก */
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #f5d76e;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+nav > ul > li:not(.dropdown) > a:hover::after {
+    width: 50%;
+}
+
+ 
+
+/*ส่วน MAIN*/
+main {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 15px 80px;
+    box-sizing: border-box;
+}
+
+
+/*กล่องครอบข้อมูลสัตว์รวม*/
+
+.animal-grid {
+    width: 100%; 
+}
+
+
+.animal-card {      /*กล่องครอบสัตว์*/
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        minmax(350px, 0.9fr)
+        minmax(400px, 1.1fr);
+    background-color: var(--card-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:0 8px 30px var(--shadow-color);
+    margin-bottom: 30px; /* ระยะห่างระหว่างกล่องแต่ละตัว */
+}
+
+.animal-pic {   /*กรอบรูปสัตว์*/
+    width: 100%;              
+    height: 360px;                 /* ความสูงของกรอบรูป รูปทุกตัวจะอยู่ในกรอบสูงเท่ากัน*/
+    min-height: 360px;       
+    padding: 20px;            /*  ระยะห่างระหว่างรูปกับขอบกรอบ */
+    box-sizing: border-box;
+    display: flex;               /*  จัดรูปให้อยู่ตรงกลางกรอบ */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--image-bg); /*  สีพื้นหลังกรอบรูป */
+    overflow: hidden; /*  ป้องกันรูปทะลุออกนอกกรอบ */
+    perspective: 1000px;
+}
+
+.animal-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+/* เมื่อกดแล้วให้พลิก */
+
+.animal-flip.flipped {
+    transform: rotateY(180deg);
+}
+
+.animal-front,
+.animal-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* รูปทั้งสองด้าน */
+
+.animal-front img,
+.animal-back img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    border-radius: 20px;
+
+    filter: drop-shadow(
+        0 5px 10px rgba(0, 0, 0, 0.12)
+    );
+}
+
+/* ด้านหลัง */
+
+.animal-back {
+    transform: rotateY(180deg);
+
+    background-color: #e8e0cf;
+}
+
+
+/* =========================================
+   ปุ่มดูฟอสซิล
+========================================= */
+
+.fossil-btn {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ตอนเอาเมาส์ชี้ปุ่ม */
+
+.fossil-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+
+    transform: translateX(-50%) scale(1.05);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   ป้องกัน animation เก่าชนกับการพลิก
+========================================= */
+
+/* ยกเลิก hover scale ของ img เดิม */
+
+.animal-pic:hover img {
+    transform: none;
+}
+
+.animal-pic img { /*  รูปสัตว์  */
+    width: 100%; 
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover; /*  แสดงรูปทั้งหมด ไม่ตัด */
+    object-position: center;
+    border-radius: 20px; /*  มุมมนของรูป */
+    filter: drop-shadow(  0 5px 10px rgba(0, 0, 0, 0.12) ); /* เงา*/
+    transition: transform 0.3s ease; /*  ขยายรูปเมื่อ Hover */
+} 
+
+.animal-pic:hover img {  /*้ hover รูปสัตว์ */
+    transform: scale(1.03);
+}
+
+.animal-info {  /*  ส่วนข้อมูลสัตว์ */
+    width: 100%;
+    padding: 35px 40px;
+    box-sizing: border-box;
+    background-color: var(--card-color); /*  สีพื้นหลังส่วนข้อมูลสัตว์ */
+}
+
+.animal-info h2 {    /* ชื่อสัตว์ใหญ่ */
+    margin: 0 0 22px;
+    padding-left: 15px; /* ระยะห่างระหว่างชื่อสัตว์กับเส้นด้านซ้าย */
+    border-left: 5px solid var(--accent-color);
+    color: var(--heading-color);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.animal-info p {     /* ข้อมูลแต่ละย่อหน้า */
+    margin: 0 0 14px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.85;
+    text-align: left;
+    overflow-wrap: break-word; /* ป้องกันข้อความยาวเกินกรอบ */
+    word-wrap: break-word;
+}
+
+.animal-info p strong { /* ข้อความเน้น หนา */
+    color: var(--heading-color);
+    font-weight: 700;
+} 
+
+.animal-info p:last-child { /*  ย่อหน้าสุดท้ายของข้อมูลสัตว์ */
+    margin-bottom: 0;
+}
+
+/*  เส้นแบ่งระหว่างกล่องสัตว์แต่ละตัว */
+.animal-grid > .animal-pic:nth-child(n+3) {
+    border-top: 1px solid var(--border-color);
+}
+
+.animal-grid > .animal-info:nth-child(n+4) {
+    border-top: 1px solid var(--border-color);
+}
+
+
+:root {
+
+    /* สีพื้นหลังเว็บไซต์ */
+    --bg-color: #EEE9DE;
+
+    /* สีพื้นหลังของกล่อง */
+    --card-color: #f6cd62;
+
+    /* สีกรอบ/พื้นหลังบริเวณรูป */
+    --image-bg: #f6cd62;
+
+    /* สีหัวข้อ */
+    --heading-color: #442814;
+
+    /* สีตัวหนังสือ */
+    --text-color: #000000;
+
+    /* สีตัวหนังสือรอง */
+    --text-light: #000000;
+
+    /* สีเส้นแบ่ง */
+    --border-color: #010101;
+
+    /* สีตกแต่ง */
+    --accent-color: #777777;
+
+    /* สีเงา */
+    --shadow-color: rgba(0, 0, 0, 0.10);
+}
+
+/*CATEGORY SECTION ดูสัตว์หน้าหลัก*/
+
+.category-section {
+    width: 100%;
+    padding: 50px 0;
+    background: #EEE9DE;
+}
+
+.category {          /* กล่องครอบหมวดหมู่ */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-section > span h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #593820;
+    text-align: center;
+    margin: 0 0 30px;
+    text-shadow: 1px 2px 3px rgba(252, 2, 2, 0.15);
+}
+
+.category-section > span h1::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 6px;
+    background: #d6b85a;
+    border-radius: 10px;
+    margin: 12px auto 0;
+}
+
+.category > div {   /* กล่องหมวดหมู่แต่ละตัว */
+    width: 100%;
+    min-height: 180px;
+    padding: 35px 60px;
+    display: flex;
+    
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.category > div:hover { /*  ขยายกล่องหมวดหมู่เมื่อ Hover */
+    transform: scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.category > div::before {     /*  ทำให้พื้นหลังหมวดหมู่มืดลง หรือตามสี*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.25)
+    );
+    z-index: 1;
+}
+  /*รูปพื้นหลังหมวดหมู่แต่ละหมวด*/
+.category01 {
+    background-image: url(pic/1.jpg);
+}
+
+.category02 {
+    background-image: url(pic/2.jpg);
+}
+
+.category03 {
+    background-image: url(pic/3.jpg);
+}
+
+.category04 {
+    background-image: url(pic/4.jpg);
+}
+
+.category05 {
+    background-image: url(pic/5.jpg);
+}
+
+.category h2 {      /* ชื่อหมวดหมู่ */
+    margin: 0 0 12px;
+    color: rgb(255, 247, 247);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.category a {    /* ปุ่มดูเพิ่มเติม */
+    display: inline-block;
+    padding: 9px 20px;
+    border-radius: 30px;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.category a:hover {           /*  ปุ่มดูเพิ่มเติมเมื่อ Hover */
+    background: #222;
+    color: white;
+    transform: translateX(8px);
+}
+
+/*วิดิโอแนะนำ*/
+.video-section {
+    padding: 50px 8%;
+    background: #EEE9DE;
+    color: white;
+}
+
+.video-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #593820;
+    text-align: center;
+    margin: 0 0 30px;
+    text-shadow: 1px 2px 3px rgba(252, 2, 2, 0.15);
+
+}
+.video-section h2::after{
+     content: "";
+    display: block;
+    width: 180px;
+    height: 6px;
+    background: #d6b85a;
+    border-radius: 10px;
+    margin: 12px auto 0;
+
+}
+
+/* แถววิดีโอ เลื่อนซ้าย-ขวา */
+.video-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+/* การ์ดวิดีโอ */
+.video-card {
+    min-width: 350px;
+    background: #7a4f2ab6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* วิดีโอ */
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+}
+
+.video-card h3 {
+    font-size: 16px;
+    margin: 10px 5px;
+}
+
+
+/* =========================
+   หัวข้อสมาชิกกลุ่ม
+========================= */
+
+/* =========================
+   กล่องรวมสมาชิก
+========================= */
+
+.member-list {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 35px 22px;
+}
+
+/* สมาชิก 3 คนแถวบน */
+
+.member-card:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.member-card:nth-child(2) {
+    grid-column: 3 / 5;
+}
+
+.member-card:nth-child(3) {
+    grid-column: 5 / 7;
+}
+
+/* สมาชิก 2 คนแถวล่างตรงกลาง */
+
+.member-card:nth-child(4) {
+    grid-column: 2 / 4;
+}
+
+.member-card:nth-child(5) {
+    grid-column: 4 / 6;
+}
+
+/* =========================
+   กรอบรูปและการ์ด
+========================= */
+
+.member-card {
+    position: relative;
+    min-width: 0;
+    margin-top: 12px;
+    padding: 0;
+
+    background: #fffdf8;
+    border: 2px solid #b9a58a;
+    border-radius: 9px;
+
+    box-shadow: 0 3px 8px rgba(70, 52, 31, 0.12);
+
+    transition: transform 0.25s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   สัตว์ห้อยบนขอบกรอบ
+   ใช้สัญลักษณ์ตกแต่ง
+========================= */
+
+.member-card::before {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 48px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    line-height: 1;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* สัตว์แต่ละใบ */
+
+.member-card:nth-child(1)::before {
+    content: "";
+}
+
+.member-card:nth-child(2)::before {
+    content: "";
+    
+}
+
+.member-card:nth-child(3)::before {
+    content: "";
+}
+
+.member-card:nth-child(4)::before {
+    content: "";
+}
+
+.member-card:nth-child(5)::before {
+    content: "";
+}
+
+/* =========================
+   รูปสมาชิก
+========================= */
+
+.contact-pic {
+    width: 100%;
+    height: 230px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    background: #e8e0d3;
+    border-radius: 6px 6px 0 0;
+}
+
+.contact-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================
+   ข้อความใต้รูป
+========================= */
+
+.contact-info {
+    min-height: 105px;
+    padding: 14px 8px;
+    box-sizing: border-box;
+
+    text-align: center;
+    background: #fffdf8;
+
+    border-top: 1px solid #e0d5c4;
+    border-radius: 0 0 7px 7px;
+}
+
+.contact-info h3 {
+    margin: 0 0 9px;
+
+    color: #493a2c;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-info h4 {
+    display: inline-block;
+    margin: 0;
+    padding: 5px 10px;
+
+    color: #6a543c;
+    background: #f0e8db;
+
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+
+/*  FOOTER */
+
+footer {
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+    margin-top: 80px;
+    border-top: 2px solid #f5d76e;
+    box-sizing: border-box;
+}
+
+
+/* กล่องข้อมูล Footer */
+
+.footer-info {
+    width: 100%;
+    min-height: 230px;
+    padding: 45px 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+/*  ส่วน Copyright */
+
+.footer-info > div:first-child {
+    flex: 1;
+}
+.footer-info > div:first-child p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+/*   ช่องกลาง */
+
+.footer-nav {
+    flex: 1;
+}
+
+
+/*   ส่วนคำติดต่อเรา */
+
+.footer-info > div:last-child {
+    flex: 1;
+    padding-left: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-info h4 {
+    margin: 0 0 18px;
+    color: #f5d76e;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-info p {
+    margin: 7px 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Hoverเมาส์*/
+
+.footer-info p:hover {
+    color: #f5d76e;
+    transition: color 0.3s ease;
+}
+
+
+/* เส้นด้านล่าง */
+
+footer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #f5d76e;
+}
+
+
+/* Travel  */
+
+.travel-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: #EEE9DE;
+    box-sizing: border-box;
+}
+
+.travel-section h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+.travel-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;          /* เพื่อเรียงลงมาทีละอัน */
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+/* Travel Card */
+
+.travel01,
+.travel02,
+.travel03,
+.travel04,
+.travel05 {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e5e7eb;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* เมาส์Hover */
+
+.travel01:hover,
+.travel02:hover,
+.travel03:hover,
+.travel04:hover,
+.travel05:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/*  รูปภาพ*/
+
+.travel01 img,
+.travel02 img,
+.travel03 img,
+.travel04 img,
+.travel05 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.travel01:hover img,
+.travel02:hover img,
+.travel03:hover img,
+.travel04:hover img,
+.travel05:hover img {
+    transform: scale(1.03);
+}
+
+
+/*  หัวข้อ*/
+
+.travel01 h2,
+.travel02 h2,
+.travel03 h2,
+.travel04 h2,
+.travel05 h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #263238;
+    margin: 25px 30px 12px;
+    font-weight: 700;
+}
+
+
+/*   รายละเอียด*/
+
+.travel01 p,
+.travel02 p,
+.travel03 p,
+.travel04 p,
+.travel05 p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+    margin: 0 30px 22px;
+    text-align: justify;
+}
+
+/*  ปุ่มดูแผนที่*/
+
+.map-link {
+    display: inline-block;
+    margin: 0 30px 15px;
+    padding: 10px 20px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    background: #1b5e20;
+    transform: translateX(5px);
+}
+
+
+/*  แผนที่ตัวอย่าง */
+
+.map-preview {
+
+    width: calc(100% - 60px);
+    height: 200px;
+    margin: 0 30px 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #d8dee4;
+    background: #eef1f3;
+    box-shadow:
+        inset 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.map-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+
+
+
+
+/* ==========================================
+   พื้นที่ Timeline
+========================================== */
+
+.timeline {
+    position: relative;
+
+    width: min(1150px, 100%);
+    margin: 0 auto;
+    padding: 0 0 30px;
+
+    box-sizing: border-box;
+}
+
+/* เส้นแนวตั้งกลาง */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 5px;
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        180deg,
+        #718c57,
+        #c4a66a,
+        #718c57,
+        #315b3e
+    );
+
+    box-shadow: 0 0 12px rgba(113, 140, 87, 0.25);
+}
+
+/* ==========================================
+   การ์ดแต่ละเหตุการณ์
+========================================== */
+
+.timeline-item {
+    position: relative;
+
+    width: 50%;
+    padding: 20px 45px;
+
+    box-sizing: border-box;
+    animation: cardAppear 0.7s ease both;
+}
+
+/* สลับด้านซ้ายและขวา */
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* จุดบนเส้น Timeline */
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+    top: 35px;
+
+    width: 20px;
+    height: 20px;
+
+    box-sizing: border-box;
+
+    background: #d5bd7b;
+    border: 4px solid #f5f3e8;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 3px #54734a,
+        0 0 14px rgba(196, 166, 106, 0.6);
+
+    z-index: 2;
+    animation: pointGlow 2.5s ease-in-out infinite;
+}
+
+/* จุดฝั่งซ้าย */
+
+.timeline-item:nth-child(odd)::before {
+    right: -10px;
+}
+
+/* จุดฝั่งขวา */
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+}
+
+/* ==========================================
+   กล่องเนื้อหา
+========================================== */
+
+.timeline-content {
+    position: relative;
+    overflow: hidden;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        145deg,
+        #fffef8,
+        #eeeedf
+    );
+
+    border: 1px solid #d4d8c0;
+    border-left: 5px solid #54734a;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(35, 58, 38, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* มุมตกแต่ง */
+
+.timeline-content::before {
+    content: "✦";
+    position: absolute;
+
+    top: 8px;
+    right: 15px;
+
+    color: #b69a5c;
+    font-size: 25px;
+    opacity: 0.65;
+
+    transition: transform 0.4s ease;
+}
+
+/* เอฟเฟกต์เมื่อชี้การ์ด */
+
+.timeline-content:hover {
+    transform: translateY(-7px);
+
+    border-left-color: #a77c42;
+
+    box-shadow: 0 14px 30px rgba(35, 58, 38, 0.16);
+}
+
+.timeline-content:hover::before {
+    transform: rotate(90deg) scale(1.2);
+}
+
+/* ==========================================
+   ป้ายปี
+========================================== */
+
+.timeline-year {
+    display: inline-block;
+
+    padding: 8px 16px;
+    margin-bottom: 14px;
+
+    color: #fff9e8;
+    background: #315b3e;
+
+    border: 1px solid #54734a;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    box-shadow: 0 3px 8px rgba(49, 91, 62, 0.15);
+
+    transition: background 0.3s ease;
+}
+
+.timeline-content:hover .timeline-year {
+    background: #a77c42;
+}
+
+/* ==========================================
+   หัวข้อเหตุการณ์
+========================================== */
+
+.timeline-content h2 {
+    margin: 5px 0 10px;
+
+    color: #243e2c;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.timeline-content h3 {
+    margin: 0 0 15px;
+
+    color: #8b7545;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* เนื้อหา */
+
+.timeline-content p {
+    margin: 5px 0 15px;
+
+    color: #555b4d;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* เหตุการณ์สำคัญ */
+
+.timeline-content strong {
+    color: #315b3e;
+    font-size: 16px;
+}
+
+/* ==========================================
+   แอนิเมชัน
+========================================== */
+
+@keyframes leafFloat {
+    0%, 100% {
+        transform: rotate(-25deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-15deg) translateY(-8px);
+    }
+}
+
+@keyframes pointGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 0 3px #54734a,
+            0 0 8px rgba(196, 166, 106, 0.4);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 5px #718c57,
+            0 0 17px rgba(196, 166, 106, 0.8);
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

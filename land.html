@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สัตว์บก🦖</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="banner.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="land">
+ <!-- ส่วนบน -->
+     <header> 
+    <div class="header">
+        <div class="logo">
+            <img src="pic/logo.jpg"  alt="สัตว์ดึกดำบรรพ์">
+            <p style="color: #ffffff;">Dino Multiverse </p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li class="dropdown">
+                    <a href="#">สัตว์ดึกดำบรรพ์</a>
+                    <ul class="dropdown-content">
+                        <li><a href="land.html">สัตว์บก</a></li>
+                        <li><a href="sea.html">สัตว์น้ำ</a></li>
+                        <li><a href="bird.html">สัตว์ปีก</a></li>
+                        <li><a href="snake.html">สัตว์เลื้อยคลาน</a></li>
+                        <li><a href="evolution.html">สัตว์ที่มีวิวัฒนาการถึงปัจจุบัน</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">เพิ่มเติม</a>
+                    <ul class="dropdown-content">
+                        <li><a href="era.html">ยุคสมัย</a></li>
+                        <li><a href="travel.html">สถานที่ท่องเที่ยว</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+
+    </div>
+   </header>
+    <!-- ส่วนเนื้อหา -->
+    <section class="category-hero">
+    <div class="category-content">
+        <h1 class="title-hero">
+            สัตว์บกคืออะไร?
+        </h1>
+        <div class="category-line"></div>
+        <p>
+            สัตว์บก หมายถึง สัตว์ที่อาศัยและดำรงชีวิตอยู่บนพื้นดินเป็นหลัก
+            เช่น ช้าง ม้า วัว ควาย และสัตว์บกในยุคดึกดำบรรพ์
+        </p>
+    </div>
+    <div class="category-deco">🦕</div>
+   </section>
+    <main>
+    <div class="animal-grid">
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="trexCard">
+                    <div class="animal-front">
+                      <img src="pic/l.trex.jpg" alt="ไทแรนโนซอรัส เร็กซ์"> <!--1.ไทแรนโนซอรัส เร็กซ์-->
+                      <button class="fossil-btn" onclick="flipAnimal('trexCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/l.f.Tyrannosaurus Rex.jpg" alt="ฟอสซิลไทแรนโนซอรัส เร็กซ์">
+                     <button class="fossil-btn" onclick="flipAnimal('trexCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>1.Tyrannosaurus Rex</h2>
+                <p>วิวัฒนาการ : ปรากฏตัวช่วงปลายยุคครีเทเชียส ราว 68–66 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : ครีเทเชียส (Late Cretaceous) </p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์กลุ่ม Coelurosauria (ซีโลโรซอเรีย)เช่น Guanlong (กวนหลง)</p>
+                <p>ลักษณะ : เป็นไดโนเสาร์กินเนื้อขนาดใหญ่ เดินสองขา มีกรามและฟันที่แข็งแรงทรงพลัง สามารถบดขยี้กระดูกได้ มีขาหน้าหรือแขนที่เล็กมากเมื่อเทียบกับขนาดตัว ลำตัวยาวประมาณ 12 เมตร เป็นหนึ่งในผู้ล่าที่น่าเกรงขามที่สุดบนพื้นดิน </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="TriCard">
+                    <div class="animal-front">
+                      <img src="pic/l.triceratops.jpg" alt="ไทรเซราทอปส์"> <!--2.ไทรเซราทอปส์-->
+                      <button class="fossil-btn" onclick="flipAnimal('TriCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/l.f.Triceratops.jpg" alt="ฟอสซิลไทรเซราทอปส์">
+                     <button class="fossil-btn" onclick="flipAnimal('TriCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>2.Triceratops</h2>
+                <p>วิวัฒนาการ : วิวัฒนาการสายพันธุ์ช่วงปลายยุคครีเทเชียส ราว 68–66 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : ครีเทเชียส (Late Cretaceous) </p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์กลุ่ม Ceratopsia (เซราทอปเซีย) เช่น Yinlong (อินหลง)</p> 
+                <p> ลักษณะ : เป็นไดโนเสาร์กินพืชสี่ขา ร่างกายใหญ่โตและบึกบึน มีจุดเด่นคือเขา 3 เขาบนใบหน้า (เขาเหนือตา 2 เขา และบนจมูก 1 เขา) พร้อมแผงกระดูกขนาดใหญ่บริเวณคอ ใช้สำหรับป้องกันตัวจากผู้ล่าและดึงดูดคู่</p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="SteCard">
+                    <div class="animal-front">
+                      <img src="pic/l.Stegosaurus.jpg" alt="สเตโกซอรัส "> <!--3.สเตโกซอรัส -->
+                      <button class="fossil-btn" onclick="flipAnimal('SteCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/l.f.Stegosaurus.jpg" alt="ฟอสซิลสเตโกซอรัส ">
+                     <button class="fossil-btn" onclick="flipAnimal('SteCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>3.Stegosaurus</h2>
+                <p>วิวัฒนาการ : รุ่งเรืองในช่วงปลายยุคจูแรสซิก ราว 155–150 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : จูแรสซิก (Late Jurassic)</p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์กลุ่ม Thyreophora (ไทรีโอฟอรา) เช่น Scelidosaurus (สเคลิโดซอรัส)
+                 ลักษณะ : เป็นไดโนเสาร์กินพืชสี่ขา มีแผ่นกระดูกทรงข้าวหลามตัดเรียงเป็นแถวคู่ตลอดแนวกระดูกสันหลังตั้งแต่คอถึงปลายTail ปลายหางมีหนามแหลมยาว 4 เล่มไว้ใช้โจมตีศัตรู มีสมองขนาดเล็กมากเมื่อเทียบกับขนาดตัว </p> 
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="BraCard">
+                    <div class="animal-front">
+                      <img src="pic/l.Brachiosaurus.jpg" alt="แบรคคิโอซอรัส"> <!--4.แบรคคิโอซอรัส-->
+                      <button class="fossil-btn" onclick="flipAnimal('BraCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/l.f.Brachiosaurus.jpg" alt="ฟอสซิลแบรคคิโอซอรัส">
+                     <button class="fossil-btn" onclick="flipAnimal('BraCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>4.Brachiosaurus </h2>
+                <p>วิวัฒนาการ : ปรากฏตัวและแพร่กระจายในช่วงปลายยุคจูแรสซิก ราว 154–153 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : จูแรสซิก (Late Jurassic)</p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์กลุ่ม Sauropodomorpha (ซอโรโพโดมอร์ฟา) เช่น Eoraptor (อีโอแรปเตอร์)</p> 
+                <p>ลักษณะ : เป็นไดโนเสาร์กินพืชขนาดมหึมา มีลำคอยาวมาก ขาคู่หน้ายาวกว่าขาคู่หลัง ทำให้ลำตัวลาดเอียงขึ้นคล้ายยีราฟ ช่วยให้สามารถกินใบไม้บนยอดไม้นสูงๆ ที่ไดโนเสาร์ตัวอื่นกินไม่ถึงได้</p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="VelocCard">
+                    <div class="animal-front">
+                      <img src="pic/l.velociraptor.jpg" alt="เวโลซิแรปเตอร์ "> <!--5.เวโลซิแรปเตอร์ -->
+                      <button class="fossil-btn" onclick="flipAnimal('VelocCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/l.f.Velociraptor.jpg" alt="ฟอสซิลไเวโลซิแรปเตอร์ ">
+                     <button class="fossil-btn" onclick="flipAnimal('VelocCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>5.Velociraptor  </h2>
+                <p>วิวัฒนาการ : มีชีวิตอยู่ช่วงปลายยุคครีเทเชียส ราว 75–71 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : ครีเทเชียส (Late Cretaceous) </p>
+                <p> บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์กลุ่ม Dromaeosauridae (โดรเมโอซอริเด)</p> 
+                <p>ลักษณะ : เป็นไดโนเสาร์กินเนื้อขนาดเล็ก ความสูงระดับเอวมนุษย์ ลำตัวปราดเปรียว มีขนนกปกคลุมตามร่างกาย เดินสองขา จุดเด่นคือมีกรงเล็บรูปเคี้ยวโค้งแหลมคมที่นิ้วเท้าข้างละหนึ่งเล่ม ว่องไว ล่าเหยื่อเป็นกลุ่มและมีความฉลาดสูง </p>
+            </div>
+        </div>
+
+    </div>           
+    
+   </main>
+   <footer>
+    <div class="footer-info">
+        <div>
+             <p>© 2026 www.DinoMultiverse.com</p>
+        </div>
+        <div class="footer-nav">
+            <nav></nav>
+        </div>
+        <div>
+            <h4>ติดต่อเรา</h4>
+            <p>อีเมล: info@dinomultiverse.com</p>
+            <p>โทรศัพท์: 02-123-4567</p>
+            <p>ประเทศไทย</p>
+        </div>
+    </div>
+    
+   </footer>
+    
+</body>
+</html>

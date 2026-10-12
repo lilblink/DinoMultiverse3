@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สัตว์ที่มีวิวัฒนาการถึงปัจจุบัน💡</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="banner.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ส่วนบน -->
+   <header> 
+    <div class="header">
+        <div class="logo">
+            <img src="pic/logo.jpg"  alt="สัตว์ดึกดำบรรพ์">
+            <p style="color: #ffffff;">Dino Multiverse </p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li class="dropdown">
+                    <a href="#">สัตว์ดึกดำบรรพ์</a>
+                    <ul class="dropdown-content">
+                        <li><a href="land.html">สัตว์บก</a></li>
+                        <li><a href="sea.html">สัตว์น้ำ</a></li>
+                        <li><a href="bird.html">สัตว์ปีก</a></li>
+                        <li><a href="snake.html">สัตว์เลื้อยคลาน</a></li>
+                        <li><a href="evolution.html">สัตว์ที่มีวิวัฒนาการถึงปัจจุบัน</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">เพิ่มเติม</a>
+                    <ul class="dropdown-content">
+                        <li><a href="era.html">ยุคสมัย</a></li>
+                        <li><a href="travel.html">สถานที่ท่องเที่ยว</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+
+    </div>
+   </header>
+   <section class="category-hero">
+    <div class="category-content">
+        <h1 class="title-hero">
+           สัตว์ที่มีวิวัฒนาการถึงปัจจุบัน
+        </h1>
+        <div class="category-line"></div>
+        <p>
+            สัตว์ทุกชนิดบนโลกในปัจจุบันต่างมีวิวัฒนาการต่อเนื่องมาจากบรรพบุรุษในอดีตตั้งแต่ยุคดึกดำบรรพ์ โดยมีกลุ่ม <br>สัตว์ดึกดำบรรพ์ (Living Fossils) หรือสัตว์โบราณที่รอดชีวิตและคงรูปร่างลักษณะใกล้เคียงกับบรรพบุรุษเมื่อ<br>หลายร้อยล้านปีก่อนจนถึงปัจจุบัน
+        </p>
+    </div>
+    <div class="category-deco">💡</div>
+   </section>
+   <main>
+    <!-- ข้อมูลสัตว์ -->
+    <div class="animal-grid">
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="CockCard">
+                    <div class="animal-front">
+                      <img src="pic/e.cockroach.jpg" alt="แมลงสาบ"> <!--แมลงสาบ-->
+                      <button class="fossil-btn" onclick="flipAnimal('CockCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/e.f.Cockroach.jpg" alt="ฟอสซิลแมลงสาบ">
+                     <button class="fossil-btn" onclick="flipAnimal('CockCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>1.แมลงสาบ (Cockroach)</h2>
+                <p>วิวัฒนาการ : ประมาณ 300 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : คาร์บอนิเฟอรัส </p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์ในกลุ่ม Blattoptera (แบลตต็อพเทอรา) </p>
+                <p>ลักษณะ : ลำตัวยาวรีเป็นรูปไข่เป็นสีดำหรือสีน้ำตาลเข้ม มีส่วนหัวซ่อนอยู่ใต้อก มีหนวดยาวคล้ายเส้นด้าย ขายาวมีหนามคลุม ตัวเต็มวัยมีทั้ง มีปีกและไม่มีปีก เป็นแมลงที่หากินตามพื้นดินเป็นหลักตามที่มืด ๆ หรือในเวลากลางคืน เป็นหนึ่งในแมลงที่เก่าแก่ชนิดหนึ่งของโลก จากการบันทึกซากฟอสซิลของแมลงสาบที่ได้มีการค้นพบ </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="ElephantCard">
+                    <div class="animal-front">
+                      <img src="pic/e.elephant.jpg" alt="ช้าง"> <!--2.ช้าง-->
+                      <button class="fossil-btn" onclick="flipAnimal('ElephantCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/e.f.Elephant.jpg" alt="ฟอสซิลช้าง">
+                     <button class="fossil-btn" onclick="flipAnimal('ElephantCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>2.ช้าง (Elephant)</h2>
+                <p>วิวัฒนาการ : ประมาณ40 ล้านปีก่อน</p>
+                <p> ยุคที่ถือกำเนิด : ซีโนโซอิก</p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : Eritherium (เอริเธียเรียม) และ Moeritherium (มอริเทอเรียม)</p> 
+                <p>ลักษณะ : สัตว์เลี้ยงลูกด้วยนมขนาดใหญ่ ปัจจุบันมีอยู่ 3 สปีชีต์ คือช้าง แอฟริกา ช้างป่าแอฟริกา ช้างเอเชีย ลักษณะเด่นของช้าง ลักษณะเด่นของช้างทุกชนิดได้แก่ งวงยาว หูกางขนาดใหญ่ ขาใหญ่ และผิวหนังที่หนาแต่ละเอียดอ่อน และช้างยังเป็นสัตว์บกขนาดใหญ่ที่สุด  วิวัฒนาการขวิวัฒนาการของข้างเริ่มต้นจากสัตว์เลี้ยงลูกด้วยนม ขนาดเท่าหมูที่ชื่อว่า Moeritherium  </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="CrocoCard">
+                    <div class="animal-front">
+                      <img src="pic/e.Crocodile.jpg" alt="จระเข้"> <!--3.จระเข้-->
+                      <button class="fossil-btn" onclick="flipAnimal('CrocoCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/e,f.Crocodile.jpg" alt="ฟอสซิลจระเข้">
+                     <button class="fossil-btn" onclick="flipAnimal('CrocoCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>3.จระเข้(Crocodile)</h2>
+                <p>วิวัฒนาการ : ประมาณ 200 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด : ไทรแอสสิก </p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : สัตว์ในกลุ่ม Crurotarsi (ครูโรทาร์ซี) </p> 
+                <p>ลักษณะ :เป็นสัตว์เลื้อยคลานขนาดใหญ่ที่สุดในโลก เมื่อโตเต็มวัย อาจมีความยาวถึง 9 เมตร มีอายุยืนถึง 70 ปี เป็นสัตว์เลือดเย็น มีหัวใจครบ 4 ห้องแต่ไม่สมบูรณ์ สมองเจริญเติบโตดีกว่าสัตว์เลื้อยคลานชนิดอื่น   ถูกแบ่งออกเป็น 3 สกุล คือ จระเข้ เอลิเกเตอร์ และตะโขง  จากการค้นพบเปิดเผยว่า สัตว์ดึกดำบรรพ์ที่กลายพันธุ์มาเป็นจระเข้ นั้นก็คือ Batrachopus grandis </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="SturgeonCard">
+                    <div class="animal-front">
+                      <img src="pic/e.Sturgeon.jpg" alt="ปลาสเตอร์เจียน"> <!--4.ปลาสเตอร์เจียน-->
+                      <button class="fossil-btn" onclick="flipAnimal('SturgeonCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/e.f.Sturgeon.jpg" alt="ฟอสซิลปลาสเตอร์เจียน">
+                     <button class="fossil-btn" onclick="flipAnimal('SturgeonCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>4.ปลาสเตอร์เจียน (Sturgeon)</h2>
+                <p>วิวัฒนาการ : ประมาณ 145 ล้านปีก่อน</p>
+                <p>ยุคที่ถือกำเนิด  : ครีเตเชียส</p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด : ปลาในตระกูล Acipenseridae ( อะซิเพนเซอริดี)</p> 
+                <p>ลักษณะ : มีรูปร่างคล้ายปลาฉลาม มีหนามแหลมสั้น ๆ บริเวณหลัง หัว และเส้นข้างลำตัวไว้เพื่อป้องกันตัว มีหนวดทั้งหมด 2 คู่อยู่บริเวณปลายจมูก ปลายหัวแหลม ปากอยู่ใต้ลำตัว ลำตัวไม่มีเกล็ด ภายในปากไม่มีฟัน ตามีขนาดเล็ก ซึ่งหนวดของปลาสเตอร์เจียนนี้มีหน้าที่สัมผัสและรับคลื่นกระแสไฟฟ้าขณะที่ว่ายน้ำ เนื่องจากไม่สามารถมองเห็นวัตถุที่อยู่ใต้ของลำตัวได้ มีขนาดใหญ่ได้ถึง 5 เมตรและน้ำหนักได้ถึง 600 กิโลกรัมปลาสเตอร์เจียนเป็นปลา 3 น้ำ คือสามารถอยู่ได้ทั้งน้ำเค็ม น้ำจืดและน้ำกร่อย อาจเป็นสาเหตุให้ปลาชนิดนี้มีชีวิตรอดมาถึงในปัจจุบัน แต่ในปัจจุบันก็มีโอกาสสูญพันธุ์จากการการล่านำไข่ไปทำไข่ปลาคาเวียร์ของมนุษย์ </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+           <div class="animal-pic">
+                 <div class="animal-flip" id="GeoCard">
+                    <div class="animal-front">
+                      <img src="pic/e.Geoduck.jpg" alt="หอยงวงช้าง"> <!--5.หอยงวงช้าง-->
+                      <button class="fossil-btn" onclick="flipAnimal('GeoCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/e.f.Geoduck.jpg" alt="ฟอสซิลหอยงวงช้าง">
+                     <button class="fossil-btn" onclick="flipAnimal('GeoCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>5.หอยงวงช้าง(Geoduck)</h2>
+                <p>วิวัฒนาการ : ประมาณ 350   ล้านปีก่อน</p>
+                <p> ยุคที่ถือกำเนิด : ไทรแอซซิค</p>
+                <p>บรรพบุรุษที่เก่าแก่ที่สุด :สัตว์ในกลุ่ม Nautiloids (นอติลอยด์) </p> 
+                <p>ลักษณะ : เปลือกแข็งม้วนเป็นวงกลมเกลียวด้านนอก ลวดลายสวยงาม ด้านในแบ่งเป็นห้องๆ  และมีหนวดยาวเกือบ 100 เส้นใกล้ๆ กับปากเพื่อใช้ต่อสู้และป้องกันตัวกับพวกนักล่า หอยงวงช้าง เรียกได้ว่าเป็น ฟอสซิลที่ยังมีชีวิต (Living Fossil) ที่เก่าแก่ที่สุดชนิดหนึ่งของโลก หอยชนิดนี้แทบจะไม่มีการเปลี่ยนแปลงเลย เปลือกของหอยงวงช้างถูกยกย่องให้เป็นหนึ่งในตัวอย่างที่ชัดเจนและสมบูรณ์แบบที่สุดของ สัดส่วนทองคำ (Golden Ratio) ซึ่งปรากฎเองตามธรรมชาติ </p>
+            </div>
+        </div>
+
+    </div>
+    
+   </main>
+   <footer>
+    <div class="footer-info">
+        <div>
+             <p>© 2026 www.DinoMultiverse.com</p>
+        </div>
+        <div class="footer-nav">
+            <nav></nav>
+        </div>
+        <div>
+            <h4>ติดต่อเรา</h4>
+            <p>อีเมล: info@dinomultiverse.com</p>
+            <p>โทรศัพท์: 02-123-4567</p>
+            <p>ประเทศไทย</p>
+        </div>
+    </div>
+    
+   </footer>
+   
+</body>
+</html>

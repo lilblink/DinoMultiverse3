@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สัตว์เลื้อยคลาน🐊</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="banner.css">
+    
+</head>
+<body>
+ <!-- ส่วนบน -->
+   <header> 
+    <div class="header">
+        <div class="logo">
+            <img src="pic/logo.jpg"  alt="สัตว์ดึกดำบรรพ์">
+            <p style="color: #ffffff;">Dino Multiverse </p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li class="dropdown">
+                    <a href="#">สัตว์ดึกดำบรรพ์</a>
+                    <ul class="dropdown-content">
+                        <li><a href="land.html">สัตว์บก</a></li>
+                        <li><a href="sea.html">สัตว์น้ำ</a></li>
+                        <li><a href="bird.html">สัตว์ปีก</a></li>
+                        <li><a href="snake.html">สัตว์เลื้อยคลาน</a></li>
+                        <li><a href="evolution.html">สัตว์ที่มีวิวัฒนาการถึงปัจจุบัน</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">เพิ่มเติม</a>
+                    <ul class="dropdown-content">
+                        <li><a href="era.html">ยุคสมัย</a></li>
+                        <li><a href="travel.html">สถานที่ท่องเที่ยว</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+
+    </div>
+   </header>
+   <section class="category-hero">
+    <div class="category-content">
+        <h1 class="title-hero">
+           สัตว์เลื้อยคลานคืออะไร?
+        </h1>
+        <div class="category-line"></div>
+        <p>
+            สัตว์เลื้อยคลาน จัดอยู่ในไฟลัมสัตว์มีแกนสันหลัง เป็นสัตว์มีกระดูกสันหลังที่จัดเป็นสัตว์ในกลุ่มแรก ๆ ของโลกที่มี<br>การดำรงชีวิตบนบกอย่างแท้จริง ตามคำจำกัดความทั่วไป โดยอันดับของสัตว์เลื้อยคลานที่มีชีวิตอยู่ในปัจจุบันมีด้วยกัน<br> 4 ประเภท ได้แก่ Testudines (เต่า), Crocodilia (จระเข้), กิ้งก่าและงู และ ทัวทารา
+        </p>
+    </div>
+    <div class="category-deco">🐍</div>
+   </section>
+   <main>
+    <div class="animal-grid">
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="PlesioCard">
+                    <div class="animal-front">
+                      <img src="pic/n.Plesiosaurs.jpg" alt="เพลสิโอซอร์"> <!--1.เพลสิโอซอร์-->
+                      <button class="fossil-btn" onclick="flipAnimal('PlesioCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/n.f.Plesiosaurs.jpg" alt="ฟอสซิลเพลสิโอซอร์">
+                     <button class="fossil-btn" onclick="flipAnimal('PlesioCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>1.Plesiosaurs</h2>
+                <p>เพลสิโอซอร์ (Plesiosaurs หมายถึง "ใกล้ถึง" และ Sauria หมายถึง กิ้งก่า) เป็นกลุ่มของสัตว์เลื้อยคลานทะเลขนาดใหญ่ที่สูญพันธุ์ไปแล้ว ตั้งแต่ยุคครีเตเชียสเมื่อราว 65 ล้านปีก่อน ที่อยู่ในอันดับ Plesiosauria </p>
+                <p>ช่วงเวลาที่มีชีวิตอยู่ : ปลายยุคไทรแอสซิก - ปลายยุคครีเตเชียส, 203.6–66.0 </p>
+                <p>เพลสิโอซอร์ ปรากฏตัวตั้งแต่ยุคไทรแอสซิกตอนปลาย (ประมาณ 230 ล้านปีก่อน[3]) มีคอยาว แต่หัวเล็ก ในปากมีฟันแหลมคม สามารถว่ายน้ำได้อย่างรวดเร็วคล่องแคล่ว และสามารถลอยตัวผ่านน้ำได้ ฟันมีลักษณะรูปกรวยมีความแหลมคมแข็งแรงมากพอที่จะฆ่าสัตว์น้ำต่าง ๆ กินเป็นอาหารได้ และด้วยความยาวลำตัวที่มากถึง 15 เมตรเป็นอย่างน้อย จึงทำให้เพลสิโอซอร์ได้ชื่อว่าเป็นอสุรกายแห่งท้องทะเลในยุคก่อนประวัติศาสตร์ด้วยความที่เป็นสัตว์นักล่าที่อยู่บนสุดของห่วงโซ่อาหาร</p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="PrognCard">
+                    <div class="animal-front">
+                      <img src="pic/n.prognathodon.jpg" alt="พร็อกนาโทดอน"> <!--2.พร็อกนาโทดอน-->
+                      <button class="fossil-btn" onclick="flipAnimal('PrognCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/n.f.Prognathodon.jpg" alt="ฟอสซิลพร็อกนาโทดอน">
+                     <button class="fossil-btn" onclick="flipAnimal('PrognCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>2.Prognathodon</h2>
+                <p>พร็อกนาโทดอน(prognathodon)เป็นสัตว์เลื้อยคลานทะเลในกลุ่มโมซาซอร์ที่ใหญ่เป็นอันดับ2รองจากไทโลซอรัสที่ยาว19เมตร(ในอดีตเคยเป็นไฮโนซอรัสที่ใหญ่ที่สุด) มันมีความยาว 14.9 เมตรและอาจหนักถึง 7 ตัน </p>
+                <p>ช่วงเวลาที่มีชีวิตอยู่ : Cretaceous period </p>
+                <p>อาหารที่พร็อกนาโทดอนชอบกินคือหอยแอมโมไนต์เพราะฟันของมันคมและแข็งแรงมาก มันจึงสามารถกัดเปลือกแอมโมไนต์ได้ และเรายังเคยพบรอยฟันของพร็อกนาโทดอนบนเปลือกแอมโมไนต์ด้วย(เป็นที่มาของฉายา "ฟันที่แข็งเหมือนเหล็ก")นอกจากนี้ พร็อกนาโทดอนยังกินทุกอย่างที่ขวางหน้า</p> 
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="HalisaurusCard">
+                    <div class="animal-front">
+                      <img src="pic/n.Halisaurus.jpg" alt="ฮาลิซอรัส"> <!--3.ฮาลิซอรัส-->
+                      <button class="fossil-btn" onclick="flipAnimal('HalisaurusCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/n.f.Halisaurus.jpg" alt="ฟอสซิลฮาลิซอรัส">
+                     <button class="fossil-btn" onclick="flipAnimal('HalisaurusCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>3.Halisaurus</h2>
+                <p>ฮาลิซอรัส (Halisaurus) เป็นสายพันธุ์ที่สูญพันธุ์แล้ว ของตระกูลโมซาซอร์ มันมีความยาวประมาณ 3-4 เมตร (10 -13 ฟุต) มันอาจจะเป็นโมซาซอร์ที่เล็กที่สุด เมื่อเทียบกับโมซาซอร์ชนิดอื่น ฮาลิซอรัสอาศัยอยู่ในช่วงยุคครีเทเชียส เมื่อประมาณ 85-65 ล้านปีก่อน ชื่อของมันมีความหมายว่า กิ้งก่าทะเล เหยื่อของมันอาจจะเป็นนกทะเลดึกดำบรรพ์ที่ชื่อ เฮสเปอร์รอร์นิส </p>
+                <p>ช่วงเวลาที่มีชีวิตอยู่ : ยุคครีเทเชียสตอยปลาย86.3–66 Ma </p>
+                <p> ในภาพยนตร์และสารคดี</p> 
+                <p>ฮาลิโอซอรัส ปรากฏตัวสั้นๆในสารคดีของ บีบีซี เรื่อง Sea Monsters:A Walking With Dinosaurs Trilogy โดยในเรื่องมันไม่ค่อยมีบทบาทอะไรมากนัก </p>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="IchthCard">
+                    <div class="animal-front">
+                      <img src="pic/n. Ichthyosaurus.jpg" alt="อิกทิโอซอรัส "> <!--4.อิกทิโอซอรัส -->
+                      <button class="fossil-btn" onclick="flipAnimal('IchthCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/n.f.Ichthyosaurus.jpg" alt="ฟอสซิลอิกทิโอซอรัส ">
+                     <button class="fossil-btn" onclick="flipAnimal('IchthCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>4.Ichthyosaurus</h2>
+                <p>อิกทิโอซอรัส (อังกฤษ: Ichthyosaurus; Ichthyo = ปลา, saurus = กิ้งก่า)เป็นสัตว์เลื้อยคลานทะเลในวงศ์อิกทิโอซอร์ ชื่อของมันหมายถึง กิ้งก่าปลาอิกทิโอซอรัส </p>
+                <p>ช่วงเวลาที่มีชีวิตอยู่ : 199–189 Ma </p>
+                <p>ถูกตั้งชื่อโดย De la Beche และ Conybeare ในปี ค.ศ.1821 มันอยู่ในทะเลร่วมกับสัตว์ทะเลอื่น ๆ เช่น โรเมลลีโอซอรัส ที่เป็นผู้ล่าในตระกูลไพลโอซอร์ อิกทิโอซอรัสอาศัยอยู่ในยุคจูแรสซิก ที่ทวีปยุโรป เช่นเบลเยียม อังกฤษ สวิตเซอร์แลนด์อิกทิโอซอรัสมีความยาวประมาณ 2 เมตร ล่าปลาและปลาหมึกเป็นอาหารอิกทิโอซอร์ชนิดสุดท้ายอยู่ในยุคครีเทเชียส ชื่อ สเต็นนอปทีรีเจียส ที่มีการค้นพบเซลล์สีในตัวของมันทำให้รู้ว่ามันมีสีน้ำตาลแดง นอกจากนี้ยังมีอิกทิโอซอร์อีกหลายชนิดในยุคจูแรสซิก เช่น เท็มโนดอนโตซอรัสซึ่งมีดวงตาขนาดใหญ่</p> 
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="animal-pic">
+                 <div class="animal-flip" id="ElasCard">
+                    <div class="animal-front">
+                      <img src="pic/n.Elasmosaurus.jpg" alt="อีลาสโมซอรัส"> <!--5.อีลาสโมซอรัส-->
+                      <button class="fossil-btn" onclick="flipAnimal('ElasCard')">
+                          🔄 ดูฟอสซิล
+                      </button>
+                    </div>
+                    <div class="animal-back">
+                    <img src="pic/n.f.Elasmosaurus.jpg" alt="ฟอสซิลอีลาสโมซอรัส">
+                     <button class="fossil-btn" onclick="flipAnimal('ElasCard')">
+                            ↩ กลับดูสัตว์
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="animal-info">
+                <h2>5.Elasmosaurus</h2>
+                <p>อีลาสโมซอรัส (ชื่อวิทยาศาสตร์: Elasmosaurus (หมายถึง แผ่นบาง ๆ ในกระดูกเชิงกราน) + σαυρος sauros 'กิ้งก่า') เป็นสัตว์เลื้อยคลานทะเลในสกุล Elasmosaurus ในตระกูลเพลสิโอซอร์ เป็นสัตว์ประเภทคอยาว โดยมีคอยาวกว่าครึ่งหนึ่งของลำตัวเสียอีกอาศัยอยู่ยุคครีเทเชียสตอนปลายเมื่อราว 80.5 ล้านปีก่อน ในสถานที่ ๆ ปัจจุบัน คือ ทวีปอเมริกาเหนือ </p>
+                <p>อีลาสโมซอรัส มีลำตัวยาวประมาณ 10.3 เมตร (37 ฟุต) มีลักษณะเด่น คือ มีคอยาวถึง 5 เมตร (ประมาณ 16 ฟุต) ส่วนขาเป็นครีบ 4 ข้าง ความยาวของลำตัวมากกว่าครึ่งเป็นส่วนคอ ประกอบด้วยกระดูกมากกว่า 70 ชิ้น ซึ่งมีจำนวนกระดูกคอมากกว่าสัตว์ทุกชนิด ส่วนหัวค่อนข้างเล็ก และฟันคมกริบ </p>
+            </div>
+        </div>
+
+    </div>
+    
+   </main>
+   <footer>
+    <div class="footer-info">
+        <div>
+             <p>© 2026 www.DinoMultiverse.com</p>
+        </div>
+        <div class="footer-nav">
+            <nav></nav>
+        </div>
+        <div>
+            <h4>ติดต่อเรา</h4>
+            <p>อีเมล: info@dinomultiverse.com</p>
+            <p>โทรศัพท์: 02-123-4567</p>
+            <p>ประเทศไทย</p>
+        </div>
+    </div>
+    
+   </footer>
+</body>
+</html>
